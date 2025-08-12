@@ -1,8 +1,14 @@
 <script>
-    age = 13;
-    maxAge = 100;
-    numPerDay = 1;
-    totalRequired = (numPerDay*365)*(maxAge-age);
-    document.write("You will need " + totalRequired + " bags of chips to last you until the ripe age of " + maxAge + "<br> <br> <br>");
-    document.write("w3schools. (n.d.). <i>JavaScript Statements</i>. https://www.w3schools.com/js/js_statements.asp/");
+    let age = window.prompt("Enter your age.");
+    let maxAge = window.prompt("Enter the max age.");
+    let numPerDay = window.prompt("Enter the number of the bags of chips you eat per day.");
+    let sure = window.confirm("Is " + age + " really your age, " + maxAge + " really your maximum age, and " + numPerDay + " really the amount of chips you eat per day?");
+
+    if (sure) {
+        totalRequired = (numPerDay*365)*(maxAge-age);
+        document.write("You will need " + totalRequired + " bags of chips to last you until the ripe age of " + maxAge);
+        document.write("<br> <br> <br> w3schools. (n.d.). <i>JavaScript Statements</i>. https://www.w3schools.com/js/js_statements.asp/");
+    } else {
+        document.write("Retry and enter your age, max age, and number of chips you eat per day correctly!");
+    }
 </script>
