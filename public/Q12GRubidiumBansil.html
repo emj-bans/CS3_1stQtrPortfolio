@@ -2,23 +2,25 @@
 <html>
 <body>
 
-    <h2> Q1 2nd Graded Exercise submitted by name of section</h2>
+    <h2> Q1 2nd Graded Exercise submitted by Emmanuel Jr. R. Bansil of 9Rubidium</h2>
 
     Enter meal price <input id="inp_mealprice"/> <br>
     Enter tip <input id="inp_tip"/> <br>
     Enter service charge <input id="inp_servchar"/> <br>
-    <button id="btn_input">Accept Input</button>
+    <button id="btn_input" onclick="totalMeal()">Accept Input</button>
+
+    <p id="mealcost">Total Meal: </p>
     
 
     <script>
         function totalMeal() {
-            const mp = document.getElementById("inp_mealprice");
-            const tip = document.getElementById("inp_tip");
-            const sc = document.getElementById("inp_servchar");
+            const mp = parseFloat(document.getElementById("inp_mealprice").value);
+            const tip = parseFloat(document.getElementById("inp_tip").value);
+            const sc = parseFloat(document.getElementById("inp_servchar").value);
 
-            var totalCost = mp + tip +(sc / 100 * mp);
+            const totalCost = mp + tip + (sc / 100 * mp);
 
-            document.write("The total cost for the meal is " + totalCost.toFixed(2));
+            document.getElementById("mealcost").innerHTML = "Total Meal: "+ totalCost.toFixed(2);
         }
     </script>
 
