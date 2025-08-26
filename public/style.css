@@ -1,0 +1,26 @@
+button {
+    padding: 10px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight:bold;
+    font-family:'Barlow Semi Condensed', sans-serif;
+    width: 180px;
+    height: 70px;
+    transition: 2s;
+    border-color: #020508;
+}
+button:hover {
+    width: 230px;
+    height: 110px;
+    background-image: url('https://i.pinimg.com/736x/98/4d/37/984d37b3450f95b6f0f2c421ac3aa65b.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 
+        -1px -1px 0 black, /* Top-left */
+        1px -1px 0 black,  /* Top-right */
+        -1px 1px 0 black,  /* Bottom-left */
+        1px 1px 0 black;   /* Bottom-right */
+    font-size:50px;
+    font-family:Pinyon Script;
+}
